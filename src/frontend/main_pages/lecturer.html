@@ -5,26 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
-  <title>Document</title>
+  <title>Lecturer Home</title>
 </head>
 <body>
   
   <header>
-    LMS
-    <p>Learning Management System</p>
+    
+    <div class="lecturer-page-top-box">
+
+      <h3>WELCOME TO AFE BABALOLA LEARNING MANAGEMENT SYSTEM</h1>
+
+      <p class="achieve">
+  
+        Labor Servitium Et Integritas 
+        
+        Labour, Service and Integrity</p>
+  
+      <div class="intro">
+        Hello &#x1f44b {{current_user.username}}
+      </div>
+    </div>
+    
+
+    
   </header>
 
-  <div class="intro">
-    
-    Hello {{current_user.username}}
-
-    <li> <a href="/register_students" class="hover2 selected selected-two">Register</a></li> 
-  </div>
 
 
-<form action="/upload" method="POST" enctype="multipart/form-data">
+<form action="/upload" method="POST" enctype="multipart/form-data" class="form-back">
 
-  <div class="intro-input">
+  <div class="intro-input input-back">
         <label for="file-1">Choose File to upload for a course</label>
         <input type="file" name="file" id="file-1" class="btn-upload"> 
 </div>
@@ -47,7 +57,7 @@
             <button class="btn-upload" id="btn-upload" type="submit" value="Upload">Course Upload</button>
         </td>
 
-          <td><a href="/take_attendance/501" class="att-link">/take Attendance</a> 
+          <td><a href="/take_attendance/501" class="att-link">Take Attendance</a> 
             </td>
     </tr>
 
@@ -57,7 +67,7 @@
       <td>Modelling and Simulation</td>
       <td>500</td>
         <td><button class="btn-upload" id="btn-upload" type="submit" value="Upload">Course Upload</td>
-          <td><a href="/take_attendance/503" class="att-link">/take Attendance</a> 
+          <td><a href="/take_attendance/503" class="att-link">Take Attendance</a> 
           </td>
     </tr>
 
@@ -67,7 +77,7 @@
       <td>Natural Language and Speech Processing</td>
       <td>500</td>
         <td><button class="btn-upload" id="btn-upload" type="submit" value="Upload">Course Upload</td>
-          <td><a href="/take_attendance/515" class="att-link">/take Attendance</a> 
+          <td><a href="/take_attendance/515" class="att-link">Take Attendance</a> 
           </td>
     </tr>
 
@@ -77,7 +87,7 @@
       <td>Digital Signal Processing</td>
       <td>500</td>
         <td><button class="btn-upload" id="btn-upload" type="submit" value="Upload">Course Upload</td>
-          <td><a href="/take_attendance/507" class="att-link">/take Attendance</a> 
+          <td><a href="/take_attendance/507" class="att-link">Take Attendance</a> 
           </td>
     </tr>
 
@@ -87,7 +97,7 @@
       <td>Software Engineering</td>
       <td>500</td>
         <td><button class="btn-upload" id="btn-upload" type="submit" value="Upload">Course Upload</td>
-          <td><a href="/take_attendance/505" class="att-link">/take Attendance</a> 
+          <td><a href="/take_attendance/505" class="att-link">Take Attendance</a> 
           </td>
     </tr>
 
@@ -97,7 +107,7 @@
       <td>Computer Graphics and Animations</td>
       <td>500</td>
         <td><button class="btn-upload" id="btn-upload" type="submit" value="Upload">Course Upload</td>
-          <td><a href="/take_attendance/511" class="att-link">/take Attendance</a> 
+          <td><a href="/take_attendance/511" class="att-link">Take Attendance</a> 
           </td>
     </tr>
 
@@ -107,15 +117,18 @@
       <td>Robotics</td>
       <td>500</td>
         <td><button class="btn-upload" id="btn-upload" type="submit" value="Upload">Course Upload</td>
-          <td><a href="/take_attendance/519" class="att-link">/take Attendance</a> 
+          <td><a href="/take_attendance/519" class="att-link">Take Attendance</a> 
           </td>
     </tr>
     
 
   </table>
   
+  <div class="bottom-panel">
+    <button class="logout lgt"><a href="/logout">Logout</a></button>
+    <li> <a href="/register_students" class="hover2 selected selected-two">Register</a></li> 
 
-  <button class="logout lgt"><a href="/logout">Logout</a></button>
+  </div>
 
 
 

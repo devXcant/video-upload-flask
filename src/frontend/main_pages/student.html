@@ -5,29 +5,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
-  <title>Document</title>
+  <title>Student Home</title>
 </head>
 <body>
-  <nav>
-    <li> <a href="#" class="hover2">Home</a></li> 
-    <li> <a href="#" class="hover2">Attendance </a></li> 
-    <li> <a href="#" class="selected">LMS</a></li> 
+  
     
-  </nav>
-
-  <header>
+    <header>
     
-    <p>Learning Management System</p>
+      <div class="lecturer-page-top-box">
+        
+        <nav>
+          <li> <a href="#" class="hover2">Home</a></li> 
+          <li> <a href="#" class="hover2">Attendance </a></li> 
+          <li> <a href="#" class="selected">LMS</a></li> 
+          
+        </nav>
+
+
+          <h3>WELCOME TO AFE BABALOLA LEARNING MANAGEMENT SYSTEM</h1>
     
+          <p class="achieve">
+      
+            Labor Servitium Et Integritas 
+            
+            Labour, Service and Integrity</p>
+      
+          <div class="intro">
+            Hello &#x1f44b {{current_user.username}}
+          </div>
 
-  </header>
+          
+      </div>
 
-  <div class="intro">
-    Hello {{current_user.username}}
+      
+      
+  
+      
+    </header>
     
-  </div>
+  
 
-  <table>
+  <table class="form-back">
     <th>S/N</th>
     <th>Course Code</th>
     <th>Course Name </th>
